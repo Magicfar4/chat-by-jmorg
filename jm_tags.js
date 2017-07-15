@@ -1,5 +1,8 @@
 /**
- * Created by Admin on 06.06.2017.
+ * Created by Magicfar4 on 06.06.2017.
+ *
+ * @project: magic-addons [Magic-Addons]
+ * @e-mail: vany.58.98.2013@gmail.com
  */
 
 var tags = {
@@ -22,7 +25,7 @@ var tags = {
 
     tag: function ($attr = {}) {
         if (typeof $attr.tag != 'undefined' && $attr.tag != null) {
-            return '<'+$attr.tag+tags.attributes($attr)+'>'+tags.content($attr)+'</'+$attr.tag+'>';
+            return '<'+$attr.tag+tags.attributes($attr)+'>'+(($attr.tag != 'img')?tags.content($attr)+'</'+$attr.tag+'>':'');
         }
 
         return null;
